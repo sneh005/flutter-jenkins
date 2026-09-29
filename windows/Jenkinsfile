@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-
         stage('Install Dependencies') {
             steps {
                 bat 'flutter pub get'
@@ -17,7 +16,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'flutter build web'
+                bat 'flutter build apk --debug'
             }
         }
     }
